@@ -1,3 +1,14 @@
+import sys
+print(sys.version)
+
+from p5 import *
+
+def setup():
+    size(640, 360)
+    no_stroke()
+    background(204)
+run(renderer="vispy")
+
 #setup lists and distance total
 list1 = []
 list2 = []
