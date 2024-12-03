@@ -53,9 +53,7 @@ with open ("Day2Input.txt") as dataInput:
         #if still unsafe after removing an entry, then it's an unsafe report
         stillUnsafe = False
 
-        #ascending/descending given by first delta
         reportDir = sign(report[1]-report[0])
-
         #special cond if first two are the same
         if (reportDir == 0):
             unsafeReport = True
@@ -68,6 +66,13 @@ with open ("Day2Input.txt") as dataInput:
                     stillUnsafe = True;
                     print("still unsafe")
                     break
+        #other special conditions - first entry is the problem
+        elif (abs(report[1] - report[0])>3):
+            unsafeReport = True
+            report.pop(0)
+            stillUnsafe = recheckReport(report, sign(report[1]-report[0]))
+            if (stillUnsafe):
+                print("still unsafe")
         else:
             #iterate through remaining entries
             for i in range(1, len(report)):
