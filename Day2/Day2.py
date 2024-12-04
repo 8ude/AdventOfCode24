@@ -45,7 +45,7 @@ def recheckReport(report, dir):
 
 #PART 2
 safeCount = 0
-with open ("Day2Input.txt") as dataInput:
+with open ("Day2Test.txt") as dataInput:
     for line in dataInput:
         #parse line into an "report" array
         report = list(map(int, line.split()))
