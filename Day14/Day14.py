@@ -53,7 +53,7 @@ p1_real = part_one(100)
 print(f"part one full safety: {p1_real}")
  
 ##############################################
-###solution from topaz?? or u/the_cassiopeia??
+###solution u/the_cassiopeia
 #I admit I don't fully understand this one
 ###############################################
 import re
